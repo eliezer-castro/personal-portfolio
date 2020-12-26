@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 320px) {
+  .jl-page-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: #1C1C1C;
+    border: 30px solid #000;
+  }
+  .jl-topbar {
+    width: 100%;
+    height: 110px;
+    display: block;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .jl-topbar .jl-logo {
+    width: 74px;
+    height: 110px;
+    float: left;
+    margin-left: 60px;
+    background-color: #2CCB69;
+    border-radius: 0 0 37px 0;
+  }
+  .jl-topbar .jl-logo img {
+    width: 46px;
+    height: 31px;
+    display: block;
+    margin: 55px auto 0;
+  }
+  .jl-topbar .jl-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .jl-topbar .jl-menu {
+    display: block;
+    float: left;
+    height: 110px;
+    margin-left: 30px;
+  }
+  .jl-topbar .jl-menu a {
+    text-decoration: none;
+    font-family: "Open Sans";
+    color: #BCBCBC;
+    font-size: 16px;
+    text-transform: lowercase;
+    display: inline-block;
+    padding: 0 20px;
+    margin-top: 50px;
+  }
+  .jl-topbar .jl-menu a:first-child {
+    padding-left: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
