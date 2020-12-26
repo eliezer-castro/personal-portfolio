@@ -1,24 +1,33 @@
-$primary-color:#2CCB69;
-$background-color: #1C1C1C;
-$font-color: #BCBCBC;
+$green-color: #2ccb69;
+$grey-color: #4d4c4c;
+$dark-color: #1c1c1c;
+$black-color: #000;
+$light-color: #bcbcbc;
 
-$font-family: 'Open Sans';
+$font-family: "Open Sans", sans-serif;
+$font-title: "Abril Fatface", serif;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media screen and (min-width: 320px){
-  .jl-page-wrapper{
+p {
+  font-family: $font-family;
+}
+
+@media screen and (min-width: 320px) {
+  .jl-page-wrapper {
     width: 100%;
     height: 100vh;
     display: block;
-    background-color: $background-color;
+    background-color: $dark-color;
     border: 30px solid #000;
   }
-  .jl-topbar{
+  .jl-topbar {
     width: 100%;
     height: 110px;
     display: block;
@@ -27,44 +36,112 @@ $font-family: 'Open Sans';
     top: 0;
     left: 0;
 
-    .jl-logo{
+    .jl-logo {
       width: 74px;
       height: 110px;
       float: left;
       margin-left: 60px;
-      background-color: $primary-color;
+      background-color: $green-color;
       border-radius: 0px 0px 37px 0px;
 
-      img{
+      img {
         width: 46px;
         height: 31px;
         display: block;
-        margin: 55px auto 0 ;
+        margin: 55px auto 0;
       }
     }
-    .jl-menu{
+    .jl-menu {
       display: none;
     }
   }
+  .jl-contact-info {
+    width: 245px;
+    height: 165px;
+    padding: 25px;
+    position: fixed;
+    bottom: 115px;
+    right: 65px;
+    z-index: 200;
+
+    .jl-contact-info-inner {
+      display: table;
+      width: 100%;
+      float: right;
+      .jl-social-links {
+        width: 100%;
+        height: 45px;
+        display: block;
+        position: relative;
+        left: -12px;
+        .jl-social {
+          width: 45px;
+          height: 45px;
+          display: inline-block;
+          padding: 8px;
+
+          img {
+            display: block;
+            width: 20px;
+            height: auto;
+            margin: 12px auto 0;
+          }
+        }
+      }
+      p {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    .jl-corner{
+      width: 25px;
+      height: 25px;
+      display: block;
+      float: right;
+      display: relative;
+    }
+    .jl-corner:after{
+      content: '';
+      width: 25px;
+      height: 25px;
+      display: block;
+      position: absolute;
+      bottom:-23px;
+      right: 0;
+      background:transparent url('../images/corner.svg') no-repeat;
+    }
+  }
+  .jl-btn-contact {
+    width: 45px;
+    height: 45px;
+    display: block;
+    background-color: $green-color;
+    background-image: url("../images/icon-contact-close.svg");
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 45px;
+    right: 45px;
+    border-radius: 50%;
+    z-index: 200;
+    transition: all 0.2s ease-out;
+  }
 }
-@media screen and (min-width: 576px){
-  
+@media screen and (min-width: 576px) {
 }
-@media screen and (min-width: 768px){
-  
+@media screen and (min-width: 768px) {
 }
-@media screen and (min-width: 992px){
-  .jl-topbar{
-    .jl-menu{
+@media screen and (min-width: 992px) {
+  .jl-topbar {
+    .jl-menu {
       display: block;
       float: left;
       height: 110px;
       margin-left: 30px;
 
-      a{
+      a {
         text-decoration: none;
         font-family: $font-family;
-        color: $font-color;
+        color: $light-color;
         font-size: 16px;
         text-transform: lowercase;
         display: inline-block;
@@ -72,39 +149,72 @@ $font-family: 'Open Sans';
         font-weight: 400;
         position: relative;
       }
-      a:first-child{
-        margin-left:0;
+      a:first-child {
+        margin-left: 0;
       }
 
-      a:hover{
-        color: $primary-color;
+      a:hover {
+        color: $green-color;
       }
 
-      a:before{
-        content: '';
+      a:before {
+        content: "";
         width: 0;
         height: 4px;
-        background-color: $primary-color;
+        background-color: $green-color;
         display: block;
         position: absolute;
         bottom: -6px;
         left: 0;
         transition: all 0.2s ease-out;
       }
-      a:hover:before{
+      a:hover:before {
         width: 100%;
       }
-
     }
   }
 }
-@media screen and (min-width: 1200px){
-  
+@media screen and (min-width: 1200px) {
 }
-@media screen and (min-width: 1364px){
-  
+@media screen and (min-width: 1364px) {
 }
-@media screen and (min-width: 1600px){
-  
+@media screen and (min-width: 1600px) {
 }
 
+/* style modules */
+
+.jl-title {
+  font-family: $font-title;
+  font-weight: normal;
+}
+
+.jl-text-green {
+  color: $green-color;
+}
+.jl-text-grey {
+  color: $grey-color;
+}
+.jl-text-dark {
+  color: $dark-color;
+}
+.jl-text-black {
+  color: $black-color;
+}
+.jl-text-light {
+  color: $light-color;
+}
+.jl-bg-green {
+  background-color: $green-color;
+}
+.jl-bg-grey {
+  background-color: $grey-color;
+}
+.jl-bg-dark {
+  background-color: $dark-color;
+}
+.jl-bg-black {
+  background-color: $black-color;
+}
+.jl-bg-light {
+  background-color: $light-color;
+}
