@@ -28,7 +28,7 @@
     float: left;
     margin-left: 60px;
     background-color: #2CCB69;
-    border-radius: 0 0 37px 0;
+    border-radius: 0px 0px 37px 0px;
   }
   .jl-topbar .jl-logo img {
     width: 46px;
@@ -55,11 +55,30 @@
     font-size: 16px;
     text-transform: lowercase;
     display: inline-block;
-    padding: 0 20px;
-    margin-top: 50px;
+    margin: 50px 20px 0 20px;
+    font-weight: 400;
+    position: relative;
   }
   .jl-topbar .jl-menu a:first-child {
-    padding-left: 0;
+    margin-left: 0;
+  }
+  .jl-topbar .jl-menu a:hover {
+    color: #2CCB69;
+  }
+  .jl-topbar .jl-menu a:before {
+    content: '';
+    width: 0;
+    height: 4px;
+    background-color: #2CCB69;
+    display: block;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  .jl-topbar .jl-menu a:hover:before {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
