@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "nodemon": "nodemon"
+  
   },
   "license": "MIT",
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "nodemon": "^2.0.6",
     "sass": "^1.30.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "browser-sync": "^2.26.13"
   }
 }
